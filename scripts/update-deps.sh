@@ -4,7 +4,9 @@
 echo "Updating dependencies in root directory..."
 
 bun update --latest
-
+bun add -g vercel
+bun add @vercel/speed-insights
+bun add @vercel/analytics
 # Update dependencies in packages and apps directories
 for dir in ./packages/* ./apps/*; do
   if [ -d "$dir" ]; then
