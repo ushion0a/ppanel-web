@@ -201,7 +201,7 @@ export default function PaymentForm<T>({
                       <FormLabel>{t('domain')}</FormLabel>
                       <FormControl>
                         <EnhancedInput
-                          placeholder={t('domainPlaceholder', { example: 'http(s)://example.com' })}
+                          placeholder='http(s)://example.com'
                           value={field.value}
                           onValueChange={(value) => form.setValue('domain', value as string)}
                         />
@@ -371,6 +371,7 @@ export default function PaymentForm<T>({
                                 ? configValues[fieldKey]
                                 : ''
                             }
+                            disabled={fieldKey === 'webhook_secret'}
                             onValueChange={(value) => {
                               const newConfig = { ...configValues };
                               newConfig[fieldKey] = value;
