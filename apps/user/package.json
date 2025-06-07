@@ -34,8 +34,7 @@
     "rtl-detect": "^1.1.2",
     "ua-parser-js": "^2.0.0",
     "universal-cookie": "^7.2.2",
-    "zustand": "^5.0.3",
-    "@vercel/speed-insights": "^1.2.0"
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
