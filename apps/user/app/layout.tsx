@@ -13,6 +13,7 @@ import { cookies } from 'next/headers';
 import { Metadata, Viewport } from 'next/types';
 import NextTopLoader from 'nextjs-toploader';
 import React from 'react';
+import { Analytics } from '@vercel/analytics/next';
 
 const fontSans = Geist({
   subsets: ['latin'],
@@ -113,6 +114,7 @@ export default async function RootLayout({
           <Providers common={{ ...config }} user={user}>
             <Toaster richColors closeButton />
             {children}
+            <Analytics />
           </Providers>
         </NextIntlClientProvider>
         <div
