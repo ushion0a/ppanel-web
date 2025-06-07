@@ -14,6 +14,7 @@ import { Metadata, Viewport } from 'next/types';
 import NextTopLoader from 'nextjs-toploader';
 import React from 'react';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const fontSans = Geist({
   subsets: ['latin'],
