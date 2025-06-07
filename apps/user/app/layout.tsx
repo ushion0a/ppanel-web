@@ -115,7 +115,8 @@ export default async function RootLayout({
             <Toaster richColors closeButton />
             {children}
             <Analytics />
-          </Providers>
+          <SpeedInsights />
+        </Providers>
         </NextIntlClientProvider>
         <div
           id='custom_html'
