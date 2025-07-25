@@ -296,8 +296,10 @@ declare namespace API {
   type CreateRuleGroupRequest = {
     name: string;
     icon: string;
+    type: string;
     tags: string[];
     rules: string;
+    default: boolean;
     enable: boolean;
   };
 
@@ -1283,9 +1285,11 @@ declare namespace API {
     id: number;
     icon: string;
     name: string;
+    type: string;
     tags: string[];
     rules: string;
     enable: boolean;
+    default: boolean;
     created_at: number;
     updated_at: number;
   };
@@ -1629,9 +1633,11 @@ declare namespace API {
   type UpdateRuleGroupRequest = {
     id: number;
     icon: string;
+    type: string;
     name: string;
     tags: string[];
     rules: string;
+    default: boolean;
     enable: boolean;
   };
 
@@ -1854,6 +1860,10 @@ declare namespace API {
     enable_login_verify: boolean;
     enable_register_verify: boolean;
     enable_reset_password_verify: boolean;
+  };
+
+  type VersionResponse = {
+    version: string;
   };
 
   type Vless = {
